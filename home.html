@@ -25,10 +25,10 @@
   <meta name="author" content="github.com/destan">
 
   <!-- Le styles -->
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/bootstrap-responsive.css" rel="stylesheet">
-  <link href="css/colorpicker.css" rel="stylesheet" />
-  <link href="css/app.css" rel="stylesheet" />
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="assets/css/colorpicker.css" rel="stylesheet" />
+  <link href="assets/css/app.css" rel="stylesheet" />
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -56,12 +56,7 @@
 
             <legend>Manage your Github labels</legend>
             <form autocomplete="on">
-              <input id="targetUrl" type="url" class="input-block" placeholder="owner:repo" onchange="copyToBelow(this)">
-              <script type="text/javascript">
-                function copyToBelow(element) {
-                  document.getElementById('targetUsername').value = element.value.split(':')[0];
-                }
-              </script>
+              <input id="targetUrl" type="url" class="input-block" placeholder="owner:repo">
               <input id="targetUsername" type="url" class="input-block" placeholder="username">
               <input id="githubPassword" type="password" class="input-block" placeholder="Password">
               <button id="listLabelsButton" type="button" class="btn btn-block" data-loading-text="Loading...">List labels in this repo</button>
@@ -74,6 +69,7 @@
                 <form class="form-inline">
                   <input id="copyUrl" type="url" class="input-block" placeholder="username:repo">
                   <button id="copyFromRepoButton" type="button" class="btn btn-info"  data-loading-text="Copying...">Copy</button>
+                  <button id="copyAndReplaceFromRepoButton" type="button" class="btn btn-success"  data-loading-text="Duplicating...">Copy and Replace</button>
                   <span class="help-block">Can be any repo, no password required for copying.</span>
                 </form>
               </div>
